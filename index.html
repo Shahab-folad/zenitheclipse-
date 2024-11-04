@@ -264,36 +264,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <!------------------------------------------------------------------------------------------------------------>
 <!-------------------------------------Content Vedio---------------------------------------------------------->
-  <!-- Root div for the React component -->
-  <div id="react-root"></div>
+   <!-- Root div for the React component -->
+    <!-- Root div for the React component -->
+    <div id="react-root"></div>
 
-  <!-- React Script with Babel -->
-  <script type="text/babel">
-      function VideoBackground() {
-          return (
-            <div>
-              <div className="video-background">
-                  <video autoPlay muted loop playsInline>
-                      <source src="Copy of Your paragraph text.mp4" type="video/mp4" />
-                      Your browser does not support the video tag.
-                  </video>
-                  <div className="content-p">
-                      <h2>Nurturing Fields of Tomorrow Weaving Worldwide Pathways of Prosperity</h2>
-                  </div>
-              </div>
+    <!-- React Script with Babel -->
+    <script type="text/babel">
+        function App() {
+            return (
+                <div>
+                    {/* Video container */}
+                    <div className="video-container">
+                        <video autoPlay muted loop playsInline>
+                            <source src="Copy of Your paragraph text.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                        {/* Overlay content on top of the video */}
+                        <div className="overlay-content">
+                            <h2>Nurturing Fields of Tomorrow Weaving Worldwide Pathways of Prosperity</h2>
+                        </div>
+                    </div>
 
-              <div className="c-2">
+                    {/* Separate content section below the video */}
+                    <div className="content-below">
+                        <h2>Content Below Video</h2>
+                        <p>Your additional text goes here.</p>
+                        <footer>Footer content goes here</footer>
+                    </div>
+                </div>
+            );
+        }
 
-              </div>
-          </div>
-              
-              
-          );
-      }
-
-      // Render the React component
-      ReactDOM.render(<VideoBackground />, document.getElementById('react-root'));
-  </script>
+        // Render the React component
+        ReactDOM.render(<App />, document.getElementById('react-root'));
+    </script>
   <!-- ------------------------------------------------------------------------------------ -->
 
 
