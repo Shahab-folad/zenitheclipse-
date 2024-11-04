@@ -5,8 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Navbar</title>
+  <!-- React and Babel CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!--------------------------- style --------------------------->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!---------------------------------------------------------------------------------------------------------->
+<!---------------------------------Desktop Navbar----------------------------------------------------------->  
   <div class="desktop-navbar">
     <header>
         <div class="top-nav">
@@ -60,8 +69,8 @@
             </div>
           </div>
         </div>
-        
-        <!-- Mobile Menu (hidden by default) -->
+<!------------------------------------------------------------------------------------------------------------->
+<!------------------------------- Mobile Menu (hidden by default) --------------------------------------------->
         <div class="mobile-menu" id="mobileMenu">
           <div class="mobile-menu-header">
             <select name="language" id="language">
@@ -222,194 +231,6 @@
         </div>
       </header>
   </div>
-  <style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-
-    .person-icon img{
-        width: 25px;
-    }
-    .nav-bar-flex{
-        display: flex;
-        align-items: center;
-        gap: 20px;
-    }
-body {
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background-color: rgba(250,250,250,.3);
-  padding: 10px 20px;
-}
-
-.top-nav {
-    display: flex;
-    align-items: end;
-    text-align: end;
-    justify-content: end;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-right: 20px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #0a2071;
-  font-size: 14px;
-}
-
-.navbar-links li a:hover,
-.nav-links li a:hover{
-    color: red;
-}
-.extra-options {
-  display: flex;
-  align-items: center;
-}
-
-.search-icon img{
-    margin-right: 10px;
-    width: 12px;
-}
-
-.language-dropdown select {
-  border: none;
-  font-size: 14px;
-  background: none;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.navbar-logo {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-logo img {
-  margin-right: 10px;
-}
-
-.navbar-logo span {
-  font-size: 14px;
-  color: #003366;
-  font-weight: bold;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  background-image: url('background-image.jpg'); /* Replace with your background image */
-  background-size: cover;
-  padding: 5px 10px;
-  gap: 20px;
-}
-
-.navbar-links li {
-  position: relative;
-  margin: 0 10px;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: #003366;
-  font-size: 20px;
-}
-
-
-.navbar-links li::after {
-  content: '|';
-  position: absolute;
-right: -25px;
-color: #ccc;
-font-size: 40px;
-top: -13px;
-}
-.navbar-links li:hover::after{
-    color: red;
-}
-.navbar-links li:last-child::after {
-  content: ''; /* Remove the separator from the last item */
-}
-
-.navbar-my-cma {
-  color: #FF0000; /* Red color for My CMA CGM */
-  font-weight: bold;
-}
-
-.mobile-navbar{
-    display: none;
-}
-
-@media (min-width: 769px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-
-    .navbar-links li::after{
-        left: -15px;
-        right: auto;
-    }
-  .top-nav {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-  }
-
-  .nav-links li {
-    margin: 5px 0;
-  }
-
-  .search-icon, .language-dropdown {
-    margin-top: 10px;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar-links {
-    flex-direction: column;
-  }
-
-  .navbar-links li {
-    margin: 5px 0;
-  }
-
-  .navbar-logo {
-    margin-bottom: 10px;
-  }
-  .desktop-navbar{
-    display: none;
-  }
-  .mobile-navbar{
-    display: block;
-  }
-}
-
-
-  </style>
 
 <script>
     function toggleMenu() {
@@ -439,7 +260,46 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 </script>
+
+<!------------------------------------------------------------------------------------------------------------>
+<!-------------------------------------Content Vedio---------------------------------------------------------->
+  <!-- Root div for the React component -->
+  <div id="react-root"></div>
+
+  <!-- React Script with Babel -->
+  <script type="text/babel">
+      function VideoBackground() {
+          return (
+            <div>
+              <div className="video-background">
+                  <video autoPlay muted loop playsInline>
+                      <source src="Copy of Your paragraph text.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                  </video>
+                  <div className="content-p">
+                      <h2>Nurturing Fields of Tomorrow Weaving Worldwide Pathways of Prosperity</h2>
+                  </div>
+              </div>
+
+              <div className="c-2">
+
+              </div>
+          </div>
+              
+              
+          );
+      }
+
+      // Render the React component
+      ReactDOM.render(<VideoBackground />, document.getElementById('react-root'));
+  </script>
+  <!-- ------------------------------------------------------------------------------------ -->
+
+
+
 </body>
 </html>
+<style>
+ 
+</style>
