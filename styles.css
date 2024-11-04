@@ -153,3 +153,224 @@
     margin-right: 5px;
     vertical-align: middle;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+    .person-icon img{
+        width: 25px;
+    }
+    .nav-bar-flex{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: rgba(250,250,250,.3);
+  padding: 10px 20px;
+}
+
+.top-nav {
+    display: flex;
+    align-items: end;
+    text-align: end;
+    justify-content: end;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #0a2071;
+  font-size: 14px;
+}
+
+.navbar-links li a:hover,
+.nav-links li a:hover{
+    color: red;
+}
+.extra-options {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon img{
+    margin-right: 10px;
+    width: 12px;
+}
+
+.language-dropdown select {
+  border: none;
+  font-size: 14px;
+  background: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  font-size: 14px;
+  color: #003366;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  background-image: url('background-image.jpg'); /* Replace with your background image */
+  background-size: cover;
+  padding: 5px 10px;
+  gap: 20px;
+}
+
+.navbar-links li {
+  position: relative;
+  margin: 0 10px;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #003366;
+  font-size: 20px;
+}
+
+
+.navbar-links li::after {
+  content: '|';
+  position: absolute;
+right: -25px;
+color: #ccc;
+font-size: 40px;
+top: -13px;
+}
+.navbar-links li:hover::after{
+    color: red;
+}
+.navbar-links li:last-child::after {
+  content: ''; /* Remove the separator from the last item */
+}
+
+.navbar-my-cma {
+  color: #FF0000; /* Red color for My CMA CGM */
+  font-weight: bold;
+}
+
+.mobile-navbar{
+    display: none;
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+
+    .navbar-links li::after{
+        left: -15px;
+        right: auto;
+    }
+  .top-nav {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+  }
+
+  .search-icon, .language-dropdown {
+    margin-top: 10px;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin: 5px 0;
+  }
+
+  .navbar-logo {
+    margin-bottom: 10px;
+  }
+  .desktop-navbar{
+    display: none;
+  }
+  .mobile-navbar{
+    display: block;
+  }
+}
+/**************************************Content Video*****************************************************/
+ /* CSS Styling */
+ .video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.video-background .content-p {
+    position: relative;
+    top: 50%;
+    color: rgb(173, 124, 30) !important;
+    font-size: 1.1rem;
+    
+    font-weight: 600;
+    width: 770px;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid rgb(173, 124, 30) ;
+}
+.content-p h2{
+    text-align: left;
+}
