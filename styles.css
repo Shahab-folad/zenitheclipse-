@@ -57,12 +57,16 @@
 .mobile-menu-links li {
     padding: 15px 20px;
     border-left: 2px solid #0a2071;
+    border-right: 2px solid #0a2071;
+
     border-bottom: 1px solid #ddd;
     margin-bottom: 1px;
 }
 
 .mobile-menu-links li:hover {
     border-left: 2px solid red;
+    border-right: 2px solid red;
+
 }
 
 .mobile-menu-links li a {
@@ -230,9 +234,7 @@ header {
   align-items: center;
 }
 
-.navbar-logo img {
-  margin-right: 10px;
-}
+
 
 .navbar-logo span {
   font-size: 14px;
@@ -262,7 +264,8 @@ header {
 
 
 .navbar-links li::after {
-  content: '|';
+  content: '+';
+  
   position: absolute;
 right: -25px;
 color: #ccc;
