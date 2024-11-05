@@ -404,11 +404,11 @@ top: -13px;
 .overlay-content h2{
     
     text-align: left;
-    border-bottom: 2px solid rgb(173, 124, 30);
+    border-bottom: 2px solid #fff;
 }
 .oc{
     font-size: 25px;
-    color: rgb(173, 124, 30);
+    color: #fff;
 }
 @media (max-width: 768px) {
     .oc{
