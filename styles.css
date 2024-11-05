@@ -403,13 +403,18 @@ top: -13px;
     text-align: left;
     border-bottom: 2px solid rgb(173, 124, 30);
 }
-.oc-h{
-    font-size: 30px;
+.oc{
+    font-size: 25px;
     color: rgb(173, 124, 30);
 }
-@media (min-width: 768) {
-    .oc-h{
-        font-size: 20px !important;
+@media (max-width: 768px) {
+    .oc{
+        font-size: 16px !important;
+    }
+}
+@media (max-width: 425px) {
+    .oc{
+        font-size: 10px !important;
     }
 }
 
