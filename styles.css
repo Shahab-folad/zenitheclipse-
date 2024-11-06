@@ -181,7 +181,7 @@ header {
 }
 
 .top-nav {
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', sans-serif;
     display: flex;
     align-items: end;
     text-align: end;
@@ -460,7 +460,7 @@ top: -6px;
   padding: 10px 20px;
   border: 1px solid #007BFF;
   font-size: large;
-  font-family: 'Cinzel', sans-serif;
+  font-family: 'Cinzel', sans-serif !important;
   color: #007BFF;
   cursor: pointer;
   outline: none;
