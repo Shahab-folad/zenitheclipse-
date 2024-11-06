@@ -224,7 +224,7 @@ header {
 }
 
 .navbar-container {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -241,7 +241,6 @@ header {
 .navbar-logo span {
   font-size: 14px;
   color: #003366;
-  font-weight: bold;
 }
 
 .navbar-links {
