@@ -287,13 +287,13 @@ top: -6px;
 
 .mobile-navbar{
     display: none;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', sans-serif;
 }
 
 @media (min-width: 769px) {
   .mobile-menu {
     display: none;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', sans-serif;
   }
 }
 @media (max-width: 768px) {
@@ -412,7 +412,7 @@ top: -6px;
 .oc{
     font-size: 25px;
     color: #007BFF;
-    font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', sans-serif;
 }
 @media (max-width: 768px) {
     .oc{
@@ -460,7 +460,7 @@ top: -6px;
   padding: 10px 20px;
   border: 1px solid #007BFF;
   font-size: large;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', sans-serif;
   color: #007BFF;
   cursor: pointer;
   outline: none;
@@ -484,13 +484,13 @@ top: -6px;
 }
 .tab-header{
 background-color: #007BFF;
-font-family: 'Lora', serif;
+font-family: 'Lora', sans-serif;
 height: 8vh;
 width: 100%;
 padding: 10px;
 }
 .Vehical{
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', sans-serif;
   border: 0.5px solid rgba(0, 0, 0, 0.055);
   padding: 1rem;
   border-radius: 5px;
@@ -507,7 +507,7 @@ padding: 10px;
 }
 .qoute-all a{
   text-decoration: none;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', sans-serif;
   color: white;
   margin: 0.5rem;
 }
@@ -516,7 +516,7 @@ padding: 10px;
 }
 .vehical-qoute p{
   padding: 0.5rem;
-  font-family: 'Lora', serif;
+  font-family: 'Lora', sans-serif;
 }
 .temprature{
   background-color: #007BFF;
@@ -529,7 +529,7 @@ padding: 10px;
 .temprature a{
   text-decoration: none;
   color: white;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cinzel', sans-serif;
 }
 /****************************************/
 .Book {
