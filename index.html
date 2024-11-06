@@ -9,9 +9,14 @@
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!------------------------- font-awesome ------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!---------------------------- font-family ---------------------------->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
   <!--------------------------- style --------------------------->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="responsive.css">
 </head>
 <body>
 <!---------------------------------------------------------------------------------------------------------->
@@ -25,7 +30,7 @@
           <div class="extra-options">
             <a href="#" class="search-icon"><img src="search.svg" alt=""></a>
             <div class="language-dropdown">
-              <select name="language" id="language">
+              <select name="language" id="language" style="font-family: 'Cinzel', serif;">
                 <option value="english">English</option>
                 <option value="french">French</option>
               </select>
@@ -46,8 +51,8 @@
           <li>
             <a href="#" class="nav-bar-flex"> 
                 <div class="person-icon">
-                    <img src="myRed.svg" alt="">
-                </div>My Account
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>&nbsp;My Account
+                </div>
             </a>
           </li>
         </ul>
@@ -198,10 +203,7 @@
         
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle nav-bar-flex" href="#" id="mycma-menu" role="button">
-                  <div class="person-icon">
-                      <img src="myRed.svg" alt="">
-                  </div>
-                  My Account
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>My Account
               </a>
               <div class="mycmaMenu dropdown-menu" aria-labelledby="mycma-menu">
                   <div class="content">
@@ -268,7 +270,6 @@ document.addEventListener("DOMContentLoaded", function () {
    <!-- Root div for the React component -->
     <!-- Root div for the React component -->
     <div id="react-root"></div>
-
     <!-- React Script with Babel -->
     <script type="text/babel">
         function App() {
@@ -288,11 +289,112 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
 
-                    {/* Separate content section below the video */}
+                    {/* Separate content section below the widget-container */}
                     <div className="content-below">
-                        <h2>Content Below Video</h2>
-                        <p>Your additional text goes here.</p>
-                        <footer>Footer content goes here</footer>
+                        <div className="widget-container">
+                            <Widget />
+                        </div>
+                        {/*       <p>Your additional text goes here.</p>      */}
+                        {/*       <footer>Footer content goes here</footer>      */}
+
+                        
+                        
+                    </div>
+                </div>
+            );
+        }
+        {/* *********************************Widget********************************************************/}
+        function Widget(){
+            return(
+                <div>
+                   <Tabs />
+                </div>
+            )
+        }
+        // **********************************Tabs*********************************
+        const Tabs =() => {
+            const [activeTab, setActiveTab] =React.useState("Qoute");
+            
+            // Function to render content based on active tab
+            const renderContent = () => {
+                switch(activeTab){
+                    case 'Quote':
+                        return <div>
+                                    <div className="tab-header">
+                                        <p>Get instant quote for your freight forwarding service</p>
+                                    </div>
+          {/*************************************** vehical-container  *************************************/} 
+          <div className="grid-container">
+                                    <div className="Vehical-container grid-container col-8">
+                                        <div className="Vehical col-6">
+                                            <img src="1.png" alt="some" width="50px"/>
+                                            <h4 className="v-text">Air Freight</h4>
+                                        </div>
+                                        <div className="Vehical col-6">
+                                            <img src="2.png" alt="some" width="50px"/>
+                                            <h4 className="v-text">Ocean Freight</h4>
+
+                                        </div>
+                                        <div className="Vehical col-6">
+                                            <img src="3.png" alt="some" width="50px"/>
+                                            <h4 className="v-text">Rail Rat</h4>
+                                        </div>
+                                        <div className="Vehical col-6">
+                                            <img src="4.png" alt="some" width="50px"/>
+                                            <h4 className="v-text">Truck Rate</h4>
+                                        </div>
+                                    </div>
+         {/******************************* Qoute-for-all-mode ***********************************************/}
+                                    <div className="vehical-qoute col-4">
+                                        <p>Don’t have a preference?</p>
+                                        <div className="qoute-all"><a href="">Qoute for all mode</a></div>
+                                        <br/>
+                                        <div className="temprature">
+                                            <a href="">Temperature-Controlled,</a>
+                                            <br/>
+                                            <a href="">Logistic Solution</a>
+                                        </div>
+                                    </div>
+        </div>
+                              </div>
+{/***********************************************************************************************************/}
+{/******************************************************* Book **********************************************/}
+
+                    case 'Book':
+                        return <div>
+                                     <div className="tab-header">
+                                        <p>Place a booking with just a few clicks</p>
+                                    </div>
+                                    <div className="grid-container">
+                                        <div className="Book col-6">
+                                            <p>Start booking with Zenith Eclipse</p>
+                                            <div className="qoute-all"><a href="">Qoute for all mode</a></div>
+                                        </div>
+                                        <div className="Book col-6">
+                                            <p>Already have an account</p>
+                                            <div className="qoute-all"><a href="">Qoute for all mode</a></div>
+                                        </div>
+
+                                    </div>
+                              </div>
+                    case 'Tracking':
+                        return <div></div>
+                    default:
+                        return null;
+                }
+            }
+            return (
+                <div className="tabs-container">
+                    {/* Tab buttons */}
+                    <div className="tabs">
+                        <button onClick={() => setActiveTab('Quote')} className={activeTab === 'Quote' ? 'active' : ''}><i class="fa fa-clock-o"></i> Quote</button>
+                        <button onClick={() => setActiveTab('Book') } className={activeTab === 'Book' ? 'active' : ''}><i class="fa fa-book"></i> Book</button>
+                        <button onClick={() => setActiveTab('Tracking')} className={activeTab === 'Tracking' ? 'active' : ''}><i class="fa fa-book"></i> Tracking</button>  
+                    </div>
+                    
+                    {/* Content display */}
+                    <div className="tab-content">
+                        {renderContent()}
                     </div>
                 </div>
             );
