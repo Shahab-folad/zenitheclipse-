@@ -181,6 +181,7 @@ header {
 }
 
 .top-nav {
+    font-family: 'Cinzel', serif;
     display: flex;
     align-items: end;
     text-align: end;
@@ -223,6 +224,7 @@ header {
 }
 
 .navbar-container {
+  font-family: 'Cinzel', serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -269,8 +271,8 @@ header {
   position: absolute;
 right: -25px;
 color: #ccc;
-font-size: 40px;
-top: -13px;
+font-size: 30px;
+top: -6px;
 }
 .navbar-links li:hover::after{
     color: red;
@@ -286,11 +288,13 @@ top: -13px;
 
 .mobile-navbar{
     display: none;
+    font-family: 'Cinzel', serif;
 }
 
 @media (min-width: 769px) {
   .mobile-menu {
     display: none;
+    font-family: 'Cinzel', serif;
   }
 }
 @media (max-width: 768px) {
@@ -404,11 +408,12 @@ top: -13px;
 .overlay-content h2{
     
     text-align: left;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.527);
 }
 .oc{
     font-size: 25px;
-    color: #fff;
+    color: #007BFF;
+    font-family: 'Cinzel', serif;
 }
 @media (max-width: 768px) {
     .oc{
@@ -425,4 +430,112 @@ top: -13px;
     padding: 20px; /* Spacing around content */
     background-color: #f0f0f0; /* Optional: background color for content */
     text-align: center; /* Center-aligns text */
+    height: 100vh;
+}
+/*************************************************************************************************************/
+/******************************************** widget-container ***********************************************/
+.widget-container{
+  width: 90%;
+  height: 50vh;
+  position: absolute;
+  top: 127.5%;
+  left: 5%;
+  
+}
+
+/**************************Tabs*********************************/
+/* styles.css */
+.tabs-container {
+  position: relative;
+  top: 40%;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tabs button {
+  width: 30%;
+  margin: 2px;
+  justify-content: left;
+  padding: 10px 20px;
+  border: 1px solid #007BFF;
+  font-size: large;
+  font-family: 'Cinzel', serif;
+  color: #007BFF;
+  cursor: pointer;
+  outline: none;
+  background-color: #eee;
+  margin-right: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+.tab-content {
+  margin-top: 2px;
+  margin-left: 4.2%;
+  margin-right: 4.2%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.tab-header{
+background-color: #007BFF;
+font-family: 'Lora', serif;
+height: 8vh;
+width: 100%;
+padding: 10px;
+}
+.Vehical{
+  font-family: 'Cinzel', serif;
+  border: 0.5px solid rgba(0, 0, 0, 0.055);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.Vehical:hover{
+  background-color: white;
+  border: 0.5px solid #007bff73;
+}
+.qoute-all{
+  background-color: #007BFF;
+  font-size: large;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.qoute-all a{
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  color: white;
+  margin: 0.5rem;
+}
+.vehical-qoute{
+  padding-top: 1rem;
+}
+.vehical-qoute p{
+  padding: 0.5rem;
+  font-family: 'Lora', serif;
+}
+.temprature{
+  background-color: #007BFF;
+  font-size: large;
+  border-radius: 5px;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.temprature a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Cinzel', serif;
+}
+/****************************************/
+.Book {
+  padding: 1rem;
+}
+.Book p{
+  padding: 0.5rem;
 }
