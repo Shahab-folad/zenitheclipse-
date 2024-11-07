@@ -561,18 +561,38 @@ padding: 10px;
 }
 .qoute-all{
   background-color: #003366;
-  font-size: large;
+  font-size: medium;
   border-radius: 5px;
   padding: 0.5rem;
 }
+@media (max-width: 320px) {
+  .qoute-all{
+    font-size: small;
+  }
+  .temprature a{
+    font-size: small;
+  }
+}
+
 .qoute-all a{
   text-decoration: none;
   font-family: 'Cinzel', sans-serif;
   color: white;
   margin: 0.5rem;
+  
 }
 .vehical-qoute{
   padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 90%;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .vehical-qoute{
+    display: grid;
+    grid-template-columns: 95%;
+    justify-content: center;
+  }
 }
 .vehical-qoute p{
   padding: 0.5rem;
@@ -594,6 +614,10 @@ padding: 10px;
 /****************************************/
 .Book {
   padding: 1rem;
+  display: grid;
+  grid-template-columns: 50%;
+  justify-content: center;
+
 }
 .Book p{
   padding: 0.5rem;
