@@ -215,6 +215,7 @@ header {
 .extra-options {
   display: flex;
   align-items: center;
+  margin-right: -40px;
 }
 
 .search-icon img{
