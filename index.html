@@ -10,9 +10,12 @@
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <!------------------------- font-awesome ------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!---------------------------- font-family ---------------------------->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
 
 
   <!--------------------------- style --------------------------->
@@ -286,6 +289,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div className="overlay-content">
                             <h2 className="oc"   style={{  }}>
                             Nurturing Fields of Tomorrow Weaving Worldwide Pathways of Prosperity
+                            
+
                             </h2>
                         </div>
                     </div>
@@ -326,25 +331,32 @@ document.addEventListener("DOMContentLoaded", function () {
                                     </div>
           {/*************************************** vehical-container  *************************************/} 
           <div className="grid-container">
-                                    <div className="Vehical-container grid-container col-8">
-                                        <div className="Vehical col-6">
+                                    <div className="Vehical-container col-8">
+        {/******************************************* row one *************************/}
+                                        
+                                            <div className="Vehical vehical-col">
                                             <img src="4.png" alt="some" width="50px"/>
                                             <h4 className="v-text">Air Freight</h4>
-                                        </div>
-                                        <div className="Vehical col-6">
+                                            </div>
+                                            <div className="Vehical">
                                             <img src="2.png" alt="some" width="50px"/>
                                             <h4 className="v-text">Ocean Freight</h4>
+                                            </div>
+                                        
+        {/************************************ row tow *********************************/}  
 
-                                        </div>
-                                        <div className="Vehical col-6">
+                                            <div className="Vehical vehical-col">
                                             <img src="3.png" alt="some" width="50px"/>
                                             <h4 className="v-text">Rail Rate</h4>
-                                        </div>
-                                        <div className="Vehical col-6">
+                                            </div>
+                                            <div className="Vehical">
                                             <img src="1.png" alt="some" width="50px"/>
                                             <h4 className="v-text">Truck Rate</h4>
-                                        </div>
+                                            </div>
+
                                     </div>
+
+                                        
          {/******************************* Qoute-for-all-mode ***********************************************/}
                                     <div className="vehical-qoute col-4">
                                         <p>Don’t have a preference?</p>
@@ -369,11 +381,11 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <div className="grid-container">
                                         <div className="Book col-6">
                                             <p>Start booking with Zenith Eclipse</p>
-                                            <div className="qoute-all"><a href="">Qoute for all mode</a></div>
+                                            <div className="qoute-all"><a href="">Sign Up</a></div>
                                         </div>
                                         <div className="Book col-6">
                                             <p>Already have an account</p>
-                                            <div className="qoute-all"><a href="">Qoute for all mode</a></div>
+                                            <div className="qoute-all"><a href="">Book Now</a></div>
                                         </div>
 
                                     </div>
@@ -389,8 +401,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     {/* Tab buttons */}
                     <div className="tabs">
                         <button onClick={() => setActiveTab('Quote')} className={activeTab === 'Quote' ? 'active' : ''}><i class="fa fa-clock-o"></i> Quote</button>
-                        <button onClick={() => setActiveTab('Book') } className={activeTab === 'Book' ? 'active' : ''}><i class="fa fa-book"></i>Book</button>
-                        <button onClick={() => setActiveTab('Tracking')} className={activeTab === 'Tracking' ? 'active' : ''}><i class="fa fa-book"></i> Tracking</button>  
+                        <button onClick={() => setActiveTab('Book') } className={activeTab === 'Book' ? 'active' : ''}><i class="fas fa-tablet-alt"></i>Book</button>
+                        <button onClick={() => setActiveTab('Tracking')} className={activeTab === 'Tracking' ? 'active' : ''}><i className="fas fa-map-marker-alt"></i>Tracking</button>  
                     </div>
                     
                     {/* Content display */}
