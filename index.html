@@ -21,6 +21,8 @@
   <!--------------------------- style --------------------------->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <!------------------------------------ footer-style ------------------------------------>
+  <link rel="stylesheet" href="Asset/style.css">
 </head>
 <body>
 <!---------------------------------------------------------------------------------------------------------->
@@ -314,6 +316,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return(
                 <div>
                    <Tabs />
+                   <HomeParagraph />
+                    <Footer />
                 </div>
             )
         }
@@ -410,6 +414,85 @@ document.addEventListener("DOMContentLoaded", function () {
                         {renderContent()}
                     </div>
                 </div>
+            );
+        }
+{/***********************************************************************************************************/}
+{/***********************************************************************************************************/}
+{/******************************************************* Paragraph component **********************************************/}
+        function HomeParagraph(){
+            return(
+                <div className="content-paragraph">
+                    <br/>
+                    <p>
+                        From seed planting to the final delivery of goods, Zenith Eclipse Co is committed to driving efficiency and excellence across the global agricultural and energy sectors. Our operations span 40 countries, reflecting a deep dedication to quality at every stage—from production and distribution to international trade and logistics. Exporting goods is a cornerstone of our business, fostering economic growth and strengthening international trade relationships. We focus on optimizing export processes, consistently exceeding global market expectations, and solidifying our reputation as a trusted supplier of premium agricultural commodities.
+                    </p><br/><br/>
+                    <div className="key-operations">
+                        <img className="newImage-section" src="./icons/2.png" alt="" width="45px"/>
+                        <h3>Key Operations</h3>
+                    </div>
+                    
+                </div>
+            );
+
+        }
+{/***********************************************************************************************************/}
+{/***********************************************************************************************************/}
+{/******************************************* footer component **********************************************/}
+        function Footer(){
+            return(
+                <div>
+                
+                    
+                <footer>
+                    <div className="footer">
+
+                        <div className="footer-logo">
+                            <img src="./Asset/cropped-1709371674575_1-min-1.png" alt="logo" />
+                        </div>
+                        <p>
+                            Zenith Eclipse Co is a leading international freight forwarding company,
+                            providing seamless global logistics solutions through an advanced
+                            digital platform. We partner with licensed, fully compliant third-party
+                            carriers for vessel and air cargo services, ensuring adherence to the
+                            highest industry standards, including those set by the International
+                            Maritime Organization and the European Union Aviation Safety Agency.
+                            While Zenith Eclipse Co does not provide additional liability insurance,
+                            all cargo are fully covered under the carrier's insurance policies. We
+                            are committed to delivering reliable, safe, and efficient transport
+                            solutions across international borders.
+                        </p>
+                        <section className="footer-links">
+                            <h2>
+                            Useful links
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Partnership</a></li>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Blogs</a></li>
+                            </ul>
+                            </h2>
+                        </section>
+                        <section className="footer-cta">
+                            <h2>Subscribe to Our Newsletter</h2>
+                            <form action="/">
+                            <input type="email" placeholder="Your Email Address" required name="email" id="email" />
+                            <button type="submit"><img src="./Asset/send.svg" alt="send icon" /></button>
+                            </form>
+                            <ul className="social-medias">
+                            <li><a href="#"><img src="./Asset/facebook.svg" alt="facebook icon" /></a></li>
+                            <li><a href="#"><img src="./Asset/insta.svg" alt="instagram icon" /></a></li>
+                            <li><a href="#"><img src="./Asset/whatsapp.svg" alt="whatsapp icon" /></a></li>
+                            <li><a href="#"><img src="./Asset/twiiter.svg" alt="twitter icon" /></a></li>
+                            </ul>
+                        </section>
+                    </div>
+                <hr/>
+                <p className="copyright">
+                    &copy;  Zenith Eclipse All rights reserved.
+                </p>
+                </footer>
+        </div>
             );
         }
 
