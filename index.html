@@ -24,7 +24,7 @@
   <!------------------------------------ footer-style ------------------------------------>
   <link rel="stylesheet" href="Asset/style.css">
 </head>
-<body>
+<body >
 <!---------------------------------------------------------------------------------------------------------->
 <!---------------------------------Desktop Navbar----------------------------------------------------------->  
   <div class="desktop-navbar">
@@ -429,12 +429,105 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div className="key-operations">
                         <img className="newImage-section" src="./icons/2.png" alt="" width="45px"/>
                         <h3>Key Operations</h3>
+                        
                     </div>
+                    <div className="key-operations-p">
+                        <p>
+At the core of Zenith Eclipse Co’s success is our expertise in cultivating, processing, and distributing a diverse range of agricultural products. Our offerings include high-quality grains, lentils, seeds, and premium oils such as sunflower and rapeseed oil. We operate advanced manufacturing facilities that produce superior wheat products and flour, meeting market demands with precision. We understand the critical role of logistics in maintaining a seamless supply chain. By leveraging an extensive network of trains, ships, and trucks, we ensure efficient global delivery, connecting suppliers and consumers effectively across 40 countries
+                        </p>
+                    </div>
+                    <br/>
+                    <br/>
+                {/************************** Venturing paragraph **************************************/}
+                    <div className="Venturing grid-container">
+                        <div className="col-6">
+                            <img src="icons/New-Project-1024x800.png" width="90%"  alt=""/>
+                        </div>
+                        <div className="col-6">
+                            <div className="key-operations">
+                                <img className="newImage-section" src="./icons/1.png" alt="" width="45px"/>
+                                <h3>Venturing into Petrochemicals</h3>
+                            </div>
+                            
+                            <p>
+  Driven by innovation, Zenith Eclipse Co has expanded its portfolio to include petrochemical products such as ethylene, propylene, and polyethylene. This strategic move allows us to meet diverse industrial needs, reinforcing our position as leaders in industry advancements and broadening our impact across various sectors.
+                            </p>
+                        </div>
+                        
+                        
+                    </div>
+                {/************************** 4+ content **************************************/}
+                        <div className="background-forty-container">
+                        <h1>
+                            Our presence stretches across 40+ nations, marking us as a key player in connecting high-quality products with the markets that need them most.
+                        </h1>
+                        </div>
+                {/************************** elementor **************************************/}
+                        <div className="elementor-container">
+                            <Elementor title="Core Objective"
+                            text="Our primary goal is to enhance lives by sourcing and delivering essential goods. We are dedicated to fostering development and generating value for clients, investors, employees, and the communities where we operate. Safety, environmental sustainability, and community well-being are at the heart of every initiative we undertake."
+                            />
+                            <Elementor title="Our Vision" 
+                            text="We strive for progress and sustainability by integrating agriculture, manufacturing expertise, global logistics, petrochemicals, and international trade services. Through seamless supply chain management, we connect individuals, businesses, and communities, setting new standards for a thriving future."
+                            />
+                            <Elementor title="Commitment" 
+                            text="At Zenith Eclipse Co, we are more than a conglomerate—we are a collective of innovators and visionaries working together to create meaningful global impact. Our mission is not just to meet demands but to shape a sustainable and prosperous future. Operating in 40+ nations, we play a pivotal role in connecting high-quality products with the markets that need them most."
+                            />
+                        </div>
                     
                 </div>
             );
 
         }
+{/******************************************* Slidshow ******************************************************/}
+
+
+{/******************************************* footer component **********************************************/}
+const Slideshow = () => {
+  const images = [
+    'https://via.placeholder.com/600x300?text=Slide+1',
+    'https://via.placeholder.com/600x300?text=Slide+2',
+    'https://via.placeholder.com/600x300?text=Slide+3',
+  ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === images.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) =>
+      prevSlide === 0 ? images.length - 1 : prevSlide - 1
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    return () => clearInterval(interval); // Clean up on component unmount
+  }, []);
+
+  return (
+    <div style={styles.slideshowContainer}>
+      <img src={images[currentSlide]} alt={`Slide ${currentSlide + 1}`} style={styles.slide} />
+      <button onClick={prevSlide} style={styles.navButton}>Previous</button>
+      <button onClick={nextSlide} style={styles.navButton}>Next</button>
+    </div>
+  );
+};
+
+{/******************************************* footer component **********************************************/}
+function Elementor(props){
+    return(
+        <div className="elementor">
+            <h1 className="elementor-h1">{props.title}</h1>
+            <p className="elementor-p">{props.text}</p>
+        </div>
+    );
+
+}
 {/***********************************************************************************************************/}
 {/***********************************************************************************************************/}
 {/******************************************* footer component **********************************************/}
