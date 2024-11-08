@@ -1,3 +1,6 @@
+.body{
+  background-color: white !important;
+}
 /* Top navigation */
 .navbar-container {
     display: flex;
@@ -297,10 +300,9 @@ top: -6px;
 }
 
 @media (min-width: 769px) {
-  .mobile-menu {
-    display: none;
-    font-family: 'Cinzel', sans-serif;
-  }
+.mobile-navbar{
+    height: 10vh;
+}
 }
 @media (max-width: 768px) {
 
@@ -356,6 +358,15 @@ top: -6px;
     overflow: hidden;
     width: 100%;
     height: 100vh;
+}
+@media (max-width: 426px) {
+  .video-background {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 80vh;
+} 
+  
 }
 
 .video-background video {
@@ -432,8 +443,9 @@ top: -6px;
 }
 
 .content-below {
+    width: 100%;
     padding: 20px; /* Spacing around content */
-    background-color: #f0f0f0; /* Optional: background color for content */
+    background-color: white; /* Optional: background color for content */
     text-align: center; /* Center-aligns text */
     height: 100vh;
 }
@@ -443,7 +455,7 @@ top: -6px;
   width: 90%;
   height: 50vh;
   position: absolute;
-  top: 127.5%;
+  top: 120%;
   left: 5%;
   
 }
@@ -464,6 +476,7 @@ top: -6px;
   width: 30%;
   height: 60px;
   margin: 2px;
+  margin-bottom: -2.8px;
   padding: 10px 20px;
   border: 1px solid #003366;
   font-size: large;
@@ -475,7 +488,7 @@ top: -6px;
   outline: none;
   background-color: #eee;
   margin-right: 5px;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: background-color 0.3s;
 }
 /**************************** Icons ****************************/
@@ -627,12 +640,36 @@ padding: 10px;
     display: grid;
     grid-template-columns: 80%;
     justify-content: center;
-    .book-p{
-      width: 110% !important;
-      font-size: 10px;
-    }
   } 
+  .book-p{
+    width: 110% !important;
+    font-size: 10px;
+  }
 }
 .book-p{
   padding: 0.5rem;
+}
+/************************ Content-paragraph ************************************************/
+.content-paragraph {
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: -16px;
+}
+
+.key-operations {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Aligns items vertically to the center */
+}
+
+.key-operations img {
+  display: inline-block;
+  margin-right: 10px; /* Add space between image and heading */
+}
+
+.key-operations h3 {
+  display: inline-block;
+  margin: 0; /* Ensure no extra space around heading */
+  font-size: 21px;
+  font-family: 'Cinzel', sans-serif;
+  color: #003366;
 }
